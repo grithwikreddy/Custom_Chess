@@ -134,7 +134,7 @@ bool Board::movePiece(int x1, int y1, int x2, int y2) {
 
     if (validMove) {
         grid[x2][y2] = grid[x1][y1];
-        grid[x1][y1] = {' ', ' '}; // Clear the old position
+        grid[x1][y1] = {' ', ' '}; 
         return true;
     } else {
         cout << "Invalid move!" << endl;
@@ -147,7 +147,7 @@ void Board::play() {
         printBoard();
         cout << "Player " << currentPlayer << "'s turn." << endl;
 
-        std::map<int, pair<int, int>> pieceList; // Use std::map
+        std::map<int, pair<int, int>> pieceList; 
         int pieceIndex = 1;
         cout << "Choose a piece to move:" << endl;
         for (int i = 0; i < BOARD_SIZE; i++) {
